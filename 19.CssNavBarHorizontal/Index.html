@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerticalMenu</title>
+    <style>
+        /* ul'lerin başındaki noktayı kaldır */
+        ul {
+            background-color: #4B4949;
+            list-style-type: none;
+            width: 100%;
+        }
+
+        ul li {
+            display: inline-block;
+            width: 100px;
+            padding: 10px;
+            margin-left: -30px;
+            margin-right: 20px;
+        }
+
+        ul li:hover {
+            background-color: red;
+            transition: 0.5s;
+        }
+
+        /* a'ların altındaki çizgiyi kaldır */
+        ul li a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+
+        }
+
+        i {
+            padding-right: 10px;
+            color: orange;
+        }
+
+        #news-content {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            margin-top: 10px;
+            margin-left: -15px;
+            width: 100px;
+        }
+
+        .news-li:hover #news-content {
+            display: block;
+        }
+
+        #news4-content {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            margin-left: 115px;
+            margin-top: -33px;
+            width: 100px;
+        }
+
+        .news4-li:hover #news4-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#"><i class="fa-solid fa-house-chimney"></i>Home</a></li>
+        <li class="news-li">
+            <a href="#" target="_blank"><i class="fa-regular fa-newspaper"></i>News</a>
+            <div id="news-content">
+                <ul>
+                    <li style="display: block;"><a href="#">News1</a></li>
+                    <li style="display: block;"><a href="#">News2</a></li>
+                    <li style="display: block;"><a href="#">News3</a></li>
+                    <li class="news4-li" style="display: block;">
+                        <a href="#">News4</a>
+                        <div id="news4-content">
+                            <ul>
+                                <li><a href="#">Details1</a></li>
+                                <li><a href="#">Details1</a></li>
+                                <li><a href="#">Details1</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#"><i class="fa-solid fa-address-card"></i>Contact</a></li>
+        <li><a href="#"><i class="fa-solid fa-house-chimney"></i>About</a></li>
+    </ul>
+</body>
+
+</html>
